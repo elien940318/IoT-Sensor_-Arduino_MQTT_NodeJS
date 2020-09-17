@@ -111,6 +111,7 @@ public class MainActivity extends AppCompatActivity {
         protected void onPostExecute(String s) {
             dialog.dismiss();
             try {
+                // doInBackground 에서 return한 response.toString() 값을 매개값 string s로 받아온다.
                 JSONArray array=new JSONArray(s);
                 items.clear();
                 for(int i=0; i<array.length();i++){

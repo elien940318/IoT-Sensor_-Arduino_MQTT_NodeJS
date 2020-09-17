@@ -15,16 +15,15 @@ app.set('port', port);
  * Create HTTP server.
  */
 var server = http.createServer(app);
-// MongoDB Á¢¼Ó
 var mongoDB=require("mongodb").MongoClient;
 var url="mongodb://127.0.0.1:27017/iot";
 var dbObj=null;
+
 mongoDB.connect(url, function(err, db){
 	dbObj=db;
 	console.log("DB Connect.......");
 });
 
-// MQTT Server Á¢¼Ó, DHT11 ¼¾¼­ µ¥ÀÌÅÍ¸¦ ÀĞ±â
 var mqtt=require("mqtt");
 var client=mqtt.connect("mqtt://192.168.10.5");
 client.on("connect" , function(){
@@ -35,7 +34,7 @@ client.on("message", function(topic, message){
 	   var obj=JSON.parse(message);
 	   obj.created_at=new Date();
 	   console.log(obj);
-	   // mongodb¿¡ DHT11 ¼¾¼­ Á¤º¸¸¦ ÀúÀåÇÏ´Â ºÎºĞ
+
 	   var sLog=dbObj.collection("sensorlog");
 	   sLog.save(obj, function(err, result){
 		   if(err)  console.log(err);
@@ -43,9 +42,11 @@ client.on("message", function(topic, message){
 	   });
 });
 
-// ¼ÒÄÏÀ» ÀÌ¿ëÇÑ Åë½Å¹æ¹ı
+
+
 var io=require("socket.io")(server);
 io.on("connection", function(socket){
+	// Webìƒì—ì„œ sensorLog í•„ìš”ì‹œ ì‹¤í–‰ë˜ëŠ” ë¶€ë¶„.
 	socket.on("socket_evt_mqtt", function(data){
 		var sLog=dbObj.collection("sensorlog");
 		sLog.find({}).sort({_id:-1}).limit(1).toArray(function(err, results){
@@ -54,6 +55,7 @@ io.on("connection", function(socket){
 			}
 		});
 	});	
+	// Webìƒì—ì„œ LED í•„ìš”ì‹œ ì‹¤í–‰ë˜ëŠ” ë¶€ë¶„.
 	socket.on("socket_evt_led", function(data){ 
        var obj=JSON.parse(data);
        client.publish("led", obj.led+"");	

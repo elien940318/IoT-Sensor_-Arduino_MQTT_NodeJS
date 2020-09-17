@@ -67,12 +67,15 @@
                   <tags>categoryTag:Mylyn</tags>
                 </children>
               </children>
-              <children xsi:type="basic:PartSashContainer" xmi:id="_xvutG_XAEeqidbH337UB1g" containerData="8229" selectedElement="_xvutHfXAEeqidbH337UB1g">
-                <children xsi:type="advanced:Placeholder" xmi:id="_xvutHPXAEeqidbH337UB1g" elementId="org.eclipse.ui.editorss" containerData="6588" ref="_xvv7qPXAEeqidbH337UB1g"/>
-                <children xsi:type="basic:PartStack" xmi:id="_xvutHfXAEeqidbH337UB1g" elementId="bottomRight" containerData="3412" selectedElement="_xvutIPXAEeqidbH337UB1g">
+              <children xsi:type="basic:PartSashContainer" xmi:id="_xvutG_XAEeqidbH337UB1g" containerData="8229" selectedElement="_xvutHPXAEeqidbH337UB1g">
+                <children xsi:type="advanced:Placeholder" xmi:id="_xvutHPXAEeqidbH337UB1g" elementId="org.eclipse.ui.editorss" containerData="8019" ref="_xvv7qPXAEeqidbH337UB1g">
+                  <tags>Maximized</tags>
+                </children>
+                <children xsi:type="basic:PartStack" xmi:id="_xvutHfXAEeqidbH337UB1g" elementId="bottomRight" visible="false" containerData="1981" selectedElement="_xvutIPXAEeqidbH337UB1g">
                   <tags>org.eclipse.e4.secondaryDataStack</tags>
                   <tags>General</tags>
-                  <tags>active</tags>
+                  <tags>Minimized</tags>
+                  <tags>MinimizedByZoom</tags>
                   <children xsi:type="advanced:Placeholder" xmi:id="_xvutHvXAEeqidbH337UB1g" elementId="org.eclipse.ui.views.TaskList" ref="_xvv72fXAEeqidbH337UB1g" closeable="true">
                     <tags>View</tags>
                     <tags>categoryTag:General</tags>
@@ -88,8 +91,10 @@
                 </children>
               </children>
             </children>
-            <children xsi:type="basic:PartStack" xmi:id="_xvutIfXAEeqidbH337UB1g" elementId="topLeft" containerData="3121" selectedElement="_xvutIvXAEeqidbH337UB1g">
+            <children xsi:type="basic:PartStack" xmi:id="_xvutIfXAEeqidbH337UB1g" elementId="topLeft" visible="false" containerData="3121" selectedElement="_xvutIvXAEeqidbH337UB1g">
               <tags>org.eclipse.e4.primaryNavigationStack</tags>
+              <tags>Minimized</tags>
+              <tags>MinimizedByZoom</tags>
               <children xsi:type="advanced:Placeholder" xmi:id="_xvutIvXAEeqidbH337UB1g" elementId="org.eclipse.ui.navigator.ProjectExplorer" ref="_xvv7uvXAEeqidbH337UB1g" closeable="true">
                 <tags>View</tags>
                 <tags>categoryTag:General</tags>
@@ -149,26 +154,29 @@
       <children xsi:type="basic:PartStack" xmi:id="_xvv7qfXAEeqidbH337UB1g" elementId="org.eclipse.e4.primaryDataStack" selectedElement="_xvv7qvXAEeqidbH337UB1g">
         <tags>org.eclipse.e4.primaryDataStack</tags>
         <tags>EditorStack</tags>
+        <tags>active</tags>
         <children xsi:type="basic:Part" xmi:id="_xvv7qvXAEeqidbH337UB1g" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="www" iconURI="platform:/plugin/org.nodeclipse.ui/icons/node_red.png" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.nodeclipse.ui.editors.NodeEditor.www&quot; name=&quot;www&quot; partName=&quot;www&quot; title=&quot;www&quot; tooltip=&quot;IOTServer/bin/www&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/IOTServer/bin/www&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;2191&quot; selectionTopPixel=&quot;1349&quot;/>&#xD;&#xA;&lt;/editor>"/>
+          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.nodeclipse.ui.editors.NodeEditor.www&quot; name=&quot;www&quot; partName=&quot;www&quot; title=&quot;www&quot; tooltip=&quot;IOTServer/bin/www&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/IOTServer/bin/www&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;733&quot; selectionTopPixel=&quot;291&quot;/>&#xD;&#xA;&lt;/editor>"/>
           <tags>Editor</tags>
           <tags>removeOnHide</tags>
           <tags>org.nodeclipse.ui.editors.NodeEditor.www</tags>
+          <tags>active</tags>
+          <tags>activeOnClose</tags>
         </children>
         <children xsi:type="basic:Part" xmi:id="_xvv7rvXAEeqidbH337UB1g" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="devices.js" iconURI="platform:/plugin/org.eclipse.ui.genericeditor/icons/full/obj16/generic_editor.png" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.ui.genericeditor.GenericEditor&quot; name=&quot;devices.js&quot; partName=&quot;devices.js&quot; title=&quot;devices.js&quot; tooltip=&quot;IOTServer/routes/devices.js&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/IOTServer/routes/devices.js&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;1064&quot; selectionTopPixel=&quot;59&quot;/>&#xD;&#xA;&lt;/editor>"/>
+          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.ui.genericeditor.GenericEditor&quot; name=&quot;devices.js&quot; partName=&quot;devices.js&quot; title=&quot;devices.js&quot; tooltip=&quot;IOTServer/routes/devices.js&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/IOTServer/routes/devices.js&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;694&quot; selectionTopPixel=&quot;0&quot;/>&#xD;&#xA;&lt;/editor>"/>
           <tags>Editor</tags>
           <tags>removeOnHide</tags>
           <tags>org.eclipse.ui.genericeditor.GenericEditor</tags>
         </children>
         <children xsi:type="basic:Part" xmi:id="_xvv7svXAEeqidbH337UB1g" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="MQTT.html" iconURI="platform:/plugin/org.eclipse.ui.genericeditor/icons/full/obj16/generic_editor.png" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.ui.genericeditor.GenericEditor&quot; name=&quot;MQTT.html&quot; partName=&quot;MQTT.html&quot; title=&quot;MQTT.html&quot; tooltip=&quot;IOTServer/public/MQTT.html&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/IOTServer/public/MQTT.html&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;1276&quot; selectionTopPixel=&quot;0&quot;/>&#xD;&#xA;&lt;/editor>"/>
+          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.ui.genericeditor.GenericEditor&quot; name=&quot;MQTT.html&quot; partName=&quot;MQTT.html&quot; title=&quot;MQTT.html&quot; tooltip=&quot;IOTServer/public/MQTT.html&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/IOTServer/public/MQTT.html&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;748&quot; selectionTopPixel=&quot;0&quot;/>&#xD;&#xA;&lt;/editor>"/>
           <tags>Editor</tags>
           <tags>removeOnHide</tags>
           <tags>org.eclipse.ui.genericeditor.GenericEditor</tags>
         </children>
         <children xsi:type="basic:Part" xmi:id="_xvv7tvXAEeqidbH337UB1g" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="app.js" iconURI="platform:/plugin/org.eclipse.ui.genericeditor/icons/full/obj16/generic_editor.png" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.ui.genericeditor.GenericEditor&quot; name=&quot;app.js&quot; partName=&quot;app.js&quot; title=&quot;app.js&quot; tooltip=&quot;IOTServer/app.js&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/IOTServer/app.js&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;887&quot; selectionTopPixel=&quot;89&quot;/>&#xD;&#xA;&lt;/editor>"/>
+          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.ui.genericeditor.GenericEditor&quot; name=&quot;app.js&quot; partName=&quot;app.js&quot; title=&quot;app.js&quot; tooltip=&quot;IOTServer/app.js&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/IOTServer/app.js&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;887&quot; selectionTopPixel=&quot;0&quot;/>&#xD;&#xA;&lt;/editor>"/>
           <tags>Editor</tags>
           <tags>removeOnHide</tags>
           <tags>org.eclipse.ui.genericeditor.GenericEditor</tags>
@@ -253,8 +261,6 @@
       <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;view/>"/>
       <tags>View</tags>
       <tags>categoryTag:General</tags>
-      <tags>active</tags>
-      <tags>activeOnClose</tags>
       <menus xmi:id="_xvv74vXAEeqidbH337UB1g" elementId="org.eclipse.ui.console.ConsoleView">
         <tags>ViewMenu</tags>
         <tags>menuContribution:menu</tags>
@@ -268,7 +274,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_xvv8CPXAEeqidbH337UB1g" elementId="org.eclipse.ui.workbench.file">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_VtF9IPaOEeqbuY8mbrvAVQ" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_xv0zzPXAEeqidbH337UB1g"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_UKiPkPiOEeq4leieUnYQjg" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_xv0zzPXAEeqidbH337UB1g"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_xvwiR_XAEeqidbH337UB1g" elementId="group.edit" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -302,7 +308,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_xvwijPXAEeqidbH337UB1g" elementId="org.eclipse.ui.workbench.navigate">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_VtQVMPaOEeqbuY8mbrvAVQ" elementId="org.eclipse.ui.window.pinEditor" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" enabled="false" type="Check" command="_xv0OPfXAEeqidbH337UB1g"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_UKo9QPiOEeq4leieUnYQjg" elementId="org.eclipse.ui.window.pinEditor" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_xv0OPfXAEeqidbH337UB1g"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_xvwimPXAEeqidbH337UB1g" elementId="group.editor" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -336,13 +342,22 @@
         <tags>Draggable</tags>
       </children>
     </trimBars>
-    <trimBars xmi:id="_xvwiuPXAEeqidbH337UB1g" elementId="org.eclipse.ui.trim.vertical1" contributorURI="platform:/plugin/org.eclipse.platform" toBeRendered="false" side="Left">
+    <trimBars xmi:id="_xvwiuPXAEeqidbH337UB1g" elementId="org.eclipse.ui.trim.vertical1" contributorURI="platform:/plugin/org.eclipse.platform" side="Left">
       <children xsi:type="menu:ToolControl" xmi:id="_xvwiufXAEeqidbH337UB1g" elementId="org.eclipse.ui.ide.perspectivestack(minimized)" toBeRendered="false" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.addons.swt/org.eclipse.e4.ui.workbench.addons.minmax.TrimStack">
         <tags>TrimStack</tags>
         <tags>Draggable</tags>
       </children>
+      <children xsi:type="menu:ToolControl" xmi:id="_RhGzYPiHEeqQ38qzzu07pw" elementId="bottomRight(IDEWindow).(org.eclipse.ui.resourcePerspective)" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.addons.swt/org.eclipse.e4.ui.workbench.addons.minmax.TrimStack">
+        <tags>TrimStack</tags>
+        <tags>Draggable</tags>
+      </children>
     </trimBars>
-    <trimBars xmi:id="_xvwiuvXAEeqidbH337UB1g" elementId="org.eclipse.ui.trim.vertical2" contributorURI="platform:/plugin/org.eclipse.platform" side="Right"/>
+    <trimBars xmi:id="_xvwiuvXAEeqidbH337UB1g" elementId="org.eclipse.ui.trim.vertical2" contributorURI="platform:/plugin/org.eclipse.platform" side="Right">
+      <children xsi:type="menu:ToolControl" xmi:id="_RhtQUPiHEeqQ38qzzu07pw" elementId="topLeft(IDEWindow).(org.eclipse.ui.resourcePerspective)" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.addons.swt/org.eclipse.e4.ui.workbench.addons.minmax.TrimStack">
+        <tags>TrimStack</tags>
+        <tags>Draggable</tags>
+      </children>
+    </trimBars>
   </children>
   <bindingTables xmi:id="_xvwiu_XAEeqidbH337UB1g" contributorURI="platform:/plugin/org.eclipse.platform" bindingContext="_xvxw2_XAEeqidbH337UB1g">
     <bindings xmi:id="_xvwivPXAEeqidbH337UB1g" keySequence="CTRL+F10" command="_xv0NnPXAEeqidbH337UB1g"/>

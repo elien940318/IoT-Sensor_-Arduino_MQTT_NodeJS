@@ -13,7 +13,7 @@ mongoDB.connect(url, function(err, db){
 var mqtt=require("mqtt"); 
 var client=mqtt.connect("mqtt://192.168.10.5");
 
-/* GET home page. */
+/* 안드로이드에서 POST로 MQTT에 LED 상태 publish 해준다. */
 router.post('/led/:flag', function(req, res, next) {
    res.set('Content-Type', 'text/json');	
    if(req.params.flag=="on"){
@@ -26,7 +26,8 @@ router.post('/led/:flag', function(req, res, next) {
    }
 });
 
-// Android APP에서 추가된 부분
+/* 안드로이드로 GET 방식 mongoDB의 데이터 JSON형식으로 ... */
+// 안드로이드상에서 sensorLog 필요시 실행되는 부분.
 router.get('/:device/:sensor', function(req, res, next){	
 	var sensorLogs=null;
 	if(req.params.sensor="sensorlog")
