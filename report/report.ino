@@ -69,7 +69,7 @@ void loop() {
   Serial.println(message);
   mqttClient.publish("sensorlog", message); 
 
-  delay(3000);
+  delay(10000);
 }
 
 void msgReceived(char* topic, byte* payload, unsigned int uLen)
