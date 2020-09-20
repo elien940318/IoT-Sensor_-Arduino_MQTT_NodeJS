@@ -13,7 +13,7 @@
 	   
 	   socket.on("socket_evt_mqtt", function(data){
 		   data=JSON.parse(data);
-		   $(".mqttlist").html('<li>'+data.tmp+'[&#176;C], '+data.hum+'[%], '+ data.dis +  '[cm], ' + data.lux + '[lx]</li>');
+		   $(".mqttlist").html('<td colspan="2">'+data.tmp+'[&#176;C], '+data.hum+'[%], '+ data.dis +  '[cm], ' + data.lux + '[lx]</td>');
 	   });
 	   if(timer==null){
 		   timer=window.setInterval("timer1()", 1000);
@@ -40,21 +40,73 @@
 	 $("#led").html("<font color='red'>"+obj.led+"</font> 되었습니다.");	 
  }
 </script>
+<style>
+   body {
+     text-align: center;
+     font-family: "Trebuchet MS", Arial;
+   }
+   table {
+     border-collapse: collapse;
+     margin-left:auto;
+     margin-right:auto;
+   }
+   th {
+     padding: 16px;
+     background-color: #0043af;
+     color: white;
+   }
+   tr {
+     border: 1px solid #ddd;
+     padding: 16px;
+   }
+   td {
+     border: none;
+     padding: 16px;
+   }
+
+   button {
+     border: 1px solid red;
+     background-color: rgba(0,0,0,0);
+     color: red;
+     padding: 5px;
+     border-radius: 5px;
+   }
+   button:hover{
+     color:white;
+     background-color:red;
+   }
+   
+ </style>
 </head>
 <body>
 <h1>MQTT Monitoring Service</h1>
 <div id="msg">  
-   <div id="mqtt_logs">
-      <ul class="mqttlist" style="font-weight: bold;"></ul>
-   </div>
-   <h2>socket 통신 LED 제어</h2>
-   <button onclick="ledOnOff(1)">LED_ON</button>
-   <button onclick="ledOnOff(2)">LED_OFF</button>
+   <table id="mqtt_logs">
+      <tr><th colspan="2">current sensing data</th></tr>
+      <tr class="mqttlist" style="font-weight: bold;"></tr>
+      <tr>
+         <td><h2>socket 통신 LED 제어</h2></td>
+         <td>
+            <button onclick="ledOnOff(1)">LED_ON</button>
+            <button onclick="ledOnOff(2)">LED_OFF</button>
+         </td>
+      </tr>
+      <tr>
+         <td>
+            <h2>RESTfull Service LED 제어</h2>
+         </td>
+         <td>
+            <button onclick="ajaxledOnOff(1)">LED_ON</button>
+            <button onclick="ajaxledOnOff(2)">LED_OFF</button>
+         </td>
+      </tr>
+      <tr>
+         <td colspan="2">
+            <div id="led">LED STATUS</div>
+         </td>
+      </tr>
+   </table>
    
-   <h2>RESTfull Service LED 제어</h2>
-   <button onclick="ajaxledOnOff(1)">LED_ON</button>
-   <button onclick="ajaxledOnOff(2)">LED_OFF</button>
-   <div id="led">LED STATUS</div>
 </div>
 </body>
 </html>
